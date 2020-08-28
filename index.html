@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template 2</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        height: 600px;
+        width: 100%;
+        background: url("bg.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .head-container {
+        z-index: 100;
+        display: flex;
+        margin: auto;
+        width: 100%;
+        height: 100px;
+        font-family: "Russo One", sans-serif;
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, 0.7);
+      }
+
+      .logo,
+      .nav-bar {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo {
+        flex: 1;
+        margin-left: 20px;
+      }
+
+      .logo-img {
+        height: 80px;
+      }
+
+      .nav-bar {
+        flex: 2;
+        justify-content: flex-end;
+        margin-right: 20px;
+      }
+
+      .nav-list {
+        display: flex;
+        list-style-type: none;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+
+      .nav-items a {
+        padding: 10px;
+        text-decoration: none;
+        color: rgb(255, 50, 50);
+      }
+
+      .nav-items a:hover {
+        background: rgb(255, 50, 50);
+        color: white;
+        transition: 0.5s ease;
+      }
+
+      .sm-icons {
+        display: flex;
+        list-style-type: none;
+      }
+
+      .tab {
+        display: none;
+      }
+
+      #check {
+        display: none;
+      }
+
+      .tab i {
+        padding: 5px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .container1 {
+        font-family: "Russo One", sans-serif;
+        width: 100%;
+        height: auto;
+      }
+
+      .contact {
+        width: 100%;
+        height: auto;
+        display: flex;
+      }
+
+      .first {
+        margin: 20px;
+        padding: 20px;
+        background: none;
+        flex: 2;
+        height: 1000px;
+        width: 100%;
+      }
+
+      
+
+      .second {
+        display: flex;
+        padding: 100px;
+        height: 600px;
+        width: 100%;
+        float: right;
+        align-items: center;
+        background: black;
+      }
+
+      .m1 {
+        margin-top: 30px;
+
+        border: 2px solid rgba(255, 0, 0, 0.63);
+        width: 35%;
+        height: 400px;
+        flex: 1;
+        justify-content: flex-end;
+        overflow-y: scroll;
+        margin-left: 10%;
+        margin-right: 5%;
+      }
+
+      .m2 {
+        margin-top: 30px;
+
+        border: 2px solid rgba(255, 0, 0, 0.63);
+        width: 35%;
+        height: 400px;
+        flex: 1;
+        justify-content: flex-end;
+        overflow-y: scroll;
+        margin-left: 5%;
+        margin-right: 10%;
+      }
+
+      .mgmt-card {
+      display: flex;
+      }
+
+      .container2 {
+        height: auto;
+        width: 100%;
+      }
+
+      .first1 {
+        height: auto;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .abt-hd {
+        font-family: "Russo One", sans-serif;
+        color: rgb(255, 50, 50);
+        text-align: center;
+        font-size: 40px;
+        letter-spacing: 5px;
+      }
+
+      .abt-p {
+        font-family: "Do Hyeon", sans-serif;
+        color: rgba(255, 0, 0, 0.63);
+
+        font-size: 25px;
+        text-align: justify;
+        margin: 20px 100px 10px 100px;
+      }
+
+      .foot {
+        height: 100px;
+        width: 100%;
+        background: black;
+      }
+
+      .container3 {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        background: rgba(255, 0, 0, 0.4);
+      }
+
+      .container3 h1 {
+        font-family: "Russo One", sans-serif;
+        font-size: 50px;
+        text-align: center;
+        letter-spacing: 3px;
+        color: white;
+      }
+
+      .videos {
+        padding: 20px;
+        display: flex;
+        height: auto;
+        width: 100%;
+        align-items: center;
+      }
+
+      .video1 {
+        flex: 1;
+        margin: 10px;
+      }
+
+      .video1 iframe {
+        width: 95%;
+        float: left;
+      }
+
+      .video2 {
+        flex: 1;
+        margin: 10px;
+      }
+      .video2 iframe {
+        width: 95%;
+        float: right;
+      }
+
+      .con-card{
+        padding: 20px ;
+        width: 100%;
+        height:auto;
+        background: url('card-bg.jpg');
+        background-position: center;
+        background-size: cover;
+        overflow: inherit;
+
+      }
+      .con-card-h {
+        font-family: "Russo One", sans-serif;
+        color: white;
+        text-align: center;
+        font-size: 60px;
+        letter-spacing: 5px;
+      }
+
+      .card1 {
+        margin-left: 10%;
+        margin-right: 5%;
+      }
+
+      .card2 {
+        margin-left: 5%;
+        margin-right: 10%;
+      }
+
+      @media screen and (max-width: 1080px) {
+        .logo-img {
+          height: 50px;
+        }
+
+        .nav-list {
+          font-size: 16px;
+        }
+
+        .abt-p {
+          margin: 20px 80px 10px 80px;
+          transition: 1s linear;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+
+        .mgmt-card{
+          flex-direction: column;
+        }
+
+
+        .m1, .m2 {
+          width: 100%;
+          height: 600px;
+          margin-left: 10%;
+        margin-right: 10%;
+        }
+
+        .second{
+          flex-direction: column;
+          height: 1000px;
+        }
+
+        .card1 {
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+
+      .card2 {
+        margin-left: 20%;
+        margin-right: 20%;
+      }
+
+      
+        .nav-bar {
+          position: sticky;
+          top: 0;
+        }
+        .nav-list {
+          position: fixed;
+          width: 60%;
+          height: 100vh;
+          background: rgba(255, 255, 255, 0.2);
+          right: -100%;
+          top: 100px;
+          flex-direction: column;
+          align-items: center;
+          transition: 0.5s ease;
+          font-size: 25px;
+        }
+
+        .nav-items {
+          margin: 20px;
+        }
+
+        .top {
+          margin-top: 40px;
+        }
+
+        .container1 {
+          flex-direction: column;
+        }
+
+        .tab {
+          display: block;
+        }
+
+        .tab:hover {
+          background: rgba(255, 0, 0, 0.63);
+          color: white;
+          transition: 0.5s ease;
+        }
+
+        #check:checked ~ .nav-list {
+          right: 0;
+        }
+
+        .abt-p {
+          margin: 20px 70px 10px 70px;
+        }
+
+        .contact {
+          flex-direction: column;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .videos {
+          flex-direction: column;
+        }
+
+        .video1 iframe {
+          width: 100%;
+        }
+        .video2 iframe {
+          width: 100%;
+        }
+
+        .abt-p {
+          margin: 20px 60px 10px 60px;
+        }
+
+        .con-card-h {
+          font-size: 40px;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .nav-list {
+          width: 100%;
+        }
+
+        .abt-p {
+          margin: 20px 50px 10px 50px;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="head-container">
+        <div class="logo">
+          <a href=""><img src="scit.png" class="logo-img" /></a>
+        </div>
+
+        <nav class="nav-bar">
+          <input type="checkbox" id="check" />
+          <label for="check" class="tab">
+            <i class="fas fa-bars"></i>
+          </label>
+          <ul class="nav-list">
+            <li class="nav-items top"><a href="#">HOME</a></li>
+            <li class="nav-items"><a href="#at">ABOUT</a></li>
+            <li class="nav-items"><a href="#vid">VIDEOS</a></li>
+            <li class="nav-items"><a href="#mmt">MANAGEMENT</a></li>
+            <li class="nav-items"><a href="#mmt">MANAGEMENT</a></li>
+            <li class="nav-items">
+              <ul class="sm-icons">
+                <li class="icons">
+                  <a href=""><i class="fab fa-facebook"></i></a>
+                </li>
+                <li class="icons">
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li class="icons">
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="container2">
+        <div class="first1">
+          <div class="abt-hd" id="at">
+            <h1>ABOUT</h1>
+          </div>
+          <div class="abt-p">
+            <p>
+              Symbiosis Centre for Information Technology, a constituent of
+              Symbiosis International University has been a pioneer and a leader
+              in imparting education in the niche area of Information Technology
+              Business Management in India for more than a decade. SCIT nurture
+              genuine IT talent To become future leaders in Information
+              Technology arena. SCIT welcomes those, who are willing To take on
+              challenges and transform themselves into proactive professionals.
+              The institute supports their transformation with innovative
+              teaching-learning methodology, state-of-the-art computer labs,
+              platform for peer learning and opportunities To learn management
+              in real time. The success of our alumni is a proof To claim that -
+              SCIT ensures overall professional development of students, who are
+              transformed into industry-ready IT professionals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container3" id="vid">
+        <h1>VIDEOS</h1>
+        <div class="videos">
+          <div class="video1">
+            <iframe
+              width="95%"
+              height="400px"
+              src="https://www.youtube.com/embed/1uBfWINUfrE"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video2">
+            <iframe
+              width="95%"
+              height="400px"
+              src="https://www.youtube.com/embed/1uBfWINUfrE"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section>
+
+<div class="con-card" id="mmt"> 
+  <h1 class="con-card-h">
+    MANAGEMENT
+  </h1>
+<div class="mgmt-card">
+  
+  
+<div class="card card1" style="width:400px;flex: 1;">
+    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+  <br>
+  <div class="card card2" style="width:400px; flex: 1;">
+    <img class="card-img-bottom" src="img_avatar6.png" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">Jane Doe</h4>
+      <p class="card-text">Some example text some example text. Jane Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+    
+  </div>
+  
+</div>
+</div>
+
+
+      </section>
+      <section class="container1" id="cnt">
+          <div class="second">
+            <div class="m1">
+              <a
+                class="twitter-timeline"
+                href="https://twitter.com/MBA_SCIT?ref_src=twsrc%5Etfw"
+                >Tweets by MBA_SCIT</a
+              >
+              <script
+                async
+                src="https://platform.twitter.com/widgets.js"
+                charset="utf-8"
+              ></script>
+            </div>
+
+            <div class="m2">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.8014507848316!2d73.73414531489368!3d18.58298798737277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbb9f36ccd5f%3A0x326d8668fc94b0a3!2sSymbiosis%20Centre%20for%20Information%20Technology!5e0!3m2!1sen!2sin!4v1598630919829!5m2!1sen!2sin"
+                width="700"
+                height="600"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+  </body>
+</html>
